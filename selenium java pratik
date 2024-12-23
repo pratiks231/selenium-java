@@ -1,0 +1,1416 @@
+*INTERFACE EXAMPLE*
+
+
+
+package OOPS;
+interface quastech
+{
+	void course();
+}
+interface branch
+{
+	void HO();
+}
+
+class SA implements quastech,branch
+{
+	public void course()
+	{
+		System.out.println("courses:Software Testing,developer,SQL,java");
+	}
+	
+	public void HO()
+	{
+		System.out.println("quastech branches:borivali,thane");
+	}
+}
+
+
+public class Interfaceexample {
+
+	public static void main(String[] args) {
+		
+		SA obj1=new SA();
+		obj1.course();
+		obj1.HO();
+
+		
+
+	}
+}
+
+
+
+package OOPS;
+interface mock
+{
+	void interview();
+}
+interface project
+{
+	void Static();
+}
+class ST implements mock,project
+{
+	public void interview()
+	{
+		System.out.println("level 1,attempt :1");
+	}
+	public  void Static()
+	{
+		System.out.println("mannual testing ");
+	}
+}
+
+
+
+
+
+
+
+
+public class interface2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ST obj1=new ST();
+		obj1.Static();
+		obj1.overview();
+
+	}
+
+}
+
+*HYBRID EXAMPLE
+
+package OOPS;
+class mt
+{
+	void mannualtesting()
+	{
+		System.out.println("set of activities to test correctness,,completeness");
+	}
+}
+class validation extends mt
+{
+	void dynamictest()
+	{
+		System.out.println("validation state:are we  building the right product");
+		
+	}
+}
+class specificationbased extends validation
+{
+	void Technique()
+	{
+		System.out.println("validation technique 1.");
+		System.out.println("equivalience class partion | boundary value");
+	}
+}
+class Experiencebased extends validation
+{
+	void Tech()
+	{
+		System.out.println("validation technique 2.");
+		System.out.println("error gussing |  exploratory testing");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+public class hybridexample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+package OOPS;
+class grandfather
+{
+	void age()
+	{
+		System.out.println("grand father age is: 78");
+	}
+}
+class father2 extends grandfather
+{
+	void height()
+	{
+		System.out.println("father height is: 6.1");
+	}
+}
+class son2 extends father2
+{
+	void hobby()
+	{
+		System.out.println("hobby is to playing cricket");
+	}
+}
+class daughter2 extends son2
+{
+	void eyecolor()
+	{
+		System.out.println("eyecolor is black");
+	}
+}
+
+public class Hybrid {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		grandfather g1=new grandfather();
+		g1.age();
+		
+		father2 f1=new father2();
+		f1.height();
+		
+		son2 s2=new son2();
+		s2.hobby();
+		
+		daughter2 d2=new daughter2();
+		d2.eyecolor();
+		
+
+	}
+
+}
+
+*CONSTRUCTOR*
+
+package OOPS;
+class Lift
+{
+	String person;
+	Lift()
+	{
+		System.out.println("default constructor");
+	}
+	Lift(String per)
+	{
+		person=per;
+	}
+	void disp()
+	{
+		System.out.println("no of people :"+person);
+	}
+}
+
+public class Constructor {
+
+	public static void main(String[] args) {
+			
+		//Lift l1=new Lift();
+		Lift l2=new Lift("5");
+		l2.disp();
+
+	}
+
+}
+
+*BYMETHOD*
+
+package OOPS;
+class dog
+{
+	String breed;
+	String size;
+	String age;
+	String color;
+	
+	void Addrecord(String br,String si,String a,String c)
+	{
+		breed=br;
+		size=si;
+		age=a;
+		color=c;
+	}
+	void info()
+	{
+		System.out.println("breed  :"+breed);
+		System.out.println("size :"+size);
+		System.out.println("age :"+age);
+		System.out.println("color :"+color);
+	}
+	
+}
+public class Bymethod2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		dog dog1=new dog ();
+		dog1.Addrecord("neapolitan mastiff", "large", "5 year", "black");
+		dog1.info();
+		
+		dog1.Addrecord("maltese", "small", "2 year", "white");
+		dog1.info();
+		
+		dog1.Addrecord("chow chow", "medium", "3 years", "brown");
+		dog1.info();
+
+
+	}
+
+}
+
+package OOPS;
+class candidate
+{
+	String name,address;
+	
+	void Addrecord(String nm,String add)
+	{
+		name=nm;
+		address=add;
+	}
+	void info()
+	{
+		System.out.println("Name :"+name);
+		System.out.println("Address :"+address);
+	}
+}
+public class Bymethod {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		candidate candidate1=new candidate();
+		
+		candidate1.Addrecord("pratik", "mumbai");
+		candidate1.info();
+
+	}
+
+}
+
+*ABSTRACTION*
+
+basic code
+
+package OOPS;
+abstract class camera01
+{
+	abstract void px();
+	
+	void disp()
+	{
+		
+	}
+}
+class camera02 extends camera01
+{
+	void px()
+	{
+		System.out.println("pixel");
+	}
+}
+
+public class Abstract {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		camera02 cam02=new camera02();
+		cam02.disp();
+		cam02.px();
+
+	}
+
+}
+
+
+*ABSTRACTION*
+
+
+package OOPS;
+abstract class animal
+{
+	abstract void makeasound();
+}
+class cat extends animal
+{
+	void makeasound()
+	{
+		System.out.println("meow meow");
+	}
+}
+class dog1 extends animal
+{
+	void makeasound()
+	{
+		System.out.println("bhow bhow");
+	}
+}
+
+public class abstract2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		cat c1=new cat();
+		System.out.println("cat make a sound like this");
+		c1.makeasound();
+		
+		
+		dog1 d1=new dog1();
+		System.out.println("dog make a sound like this");
+		d1.makeasound();
+
+	}
+
+}
+
+
+package OOPS;
+abstract class gpay
+{
+	abstract void payment();
+}
+class  kid extends gpay
+{
+	void payments()
+	{
+		System.out.println("by scanner");
+	}
+}
+class graduate1 extends gpay
+{
+	void payment()
+	{
+		System.out.println("by contact number");
+	}
+}
+
+public class abstract3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		kid k1=new kid();
+		k1.payments();
+		
+		graduate1 g1=new graduate1();
+		g1.payment();
+
+	}
+
+}
+
+package OOPS;
+abstract class addmission1
+{
+	abstract void course();
+}
+class branch1 extends addmission1
+{
+	void HO()
+	{
+		System.out.println("borivali,thane");
+	}
+}
+class cousrse2 extends addmission1
+{
+	void course()
+	{
+		System.out.println("software testing");
+	}
+}
+
+
+
+
+
+
+
+
+public class abstract4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		branch1 b1=new branch1();
+		b1.HO();
+		
+		cousrse2 c1=new cousrse2();
+		c1.course();
+		
+		
+		
+
+	}
+
+}
+
+
+*ENCAPSULATION*
+
+package OOPS;
+
+class students
+{
+	private String name;
+	int rollno,id;
+	
+	void set_stdname(String na)
+	{
+		name=na;
+	}
+	String get_stdname()
+	{
+		return name;
+	}
+	void set_rollno(int roll)
+	{
+		rollno=roll;
+	}
+	int get_rollno()
+	{
+		return rollno;
+	}
+	void set_id(int i)
+	{
+		id=i;
+	}
+	int get_id()
+	{
+		return id;
+	}
+}
+
+public class encapsulation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		students s1=new students();
+		s1.set_stdname("pratik");
+		System.out.println(s1.get_stdname());
+		
+		s1.set_rollno(100);
+		System.out.println(s1.get_rollno());
+		
+		s1.set_id(150);
+		System.out.println(s1.get_id());
+	
+	}
+
+}
+
+
+*OVERLOADDING*
+
+
+package OOPS;
+class operate
+{
+	void mul(int a,int b)
+	{
+		System.out.println(a*b);
+	}
+	void mul(int x,int y,int z)
+	{
+		System.out.println(x*y*z);
+	}
+}
+
+public class overloading {
+
+	public static void main(String[] args) {
+		
+		operate op=new operate();
+		op.mul(10, 20, 30);
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+*OVERRIDDING*
+
+
+
+package OOPS;
+
+class car1
+{
+	void speed()
+	{
+		System.out.println("speed:80 kmph");
+	}
+}
+class car2 extends car1
+{
+	void speed()
+	{
+		System.out.println("speed:90 kmph");
+	}
+}
+
+public class methodoverridding {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		car2 c2=new car2();
+		c2.speed();
+
+	}
+
+}
+
+
+*POLYMORPHISM OVERLOADDING*
+
+package OOPS;
+class maths
+{
+	void num(int l, int b)
+	{
+		System.out.println("area of rectange:"+l*b);
+	}
+	void num(int a)
+	{
+		System.out.println("area of square:"+a*a);
+	}
+	void num1(double r)
+	{
+		System.out.println("area of circle:"+3.14*r*r);
+	}
+}
+
+
+
+public class progexampletime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		maths m1=new maths();
+		m1.num(10, 10);
+		
+		m1.num(10);
+		m1.num1(2.5);
+		
+		
+		
+
+	}
+
+}
+
+*ENCAPSULATION*
+
+package OOPS;
+class login1
+{
+	private String us,psd;
+	void  set_username(String user)
+	{
+		us=user;
+	}
+	String get_username()
+	{
+		return us;
+	}
+	void set_password(String pass)
+	{
+		psd=pass;
+	}
+	String get_pasword()
+	{
+		return psd;
+	}
+}
+
+public class prog28 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		login1 l=new login1();
+		l.set_username("admin");
+		
+		System.out.println("username:"+l.get_username());
+		
+		l.set_password("abc");
+		System.out.println("password:"+l.get_pasword());
+	}
+
+}
+
+
+*COMPLITE TIME*
+
+package OOPS;
+class maths
+{
+	void num(int l, int b)
+	{
+		System.out.println("area of rectange:"+l*b);
+	}
+	void num(int a)
+	{
+		System.out.println("area of square:"+a*a);
+	}
+	void num1(double r)
+	{
+		System.out.println("area of circle:"+3.14*r*r);
+	}
+}
+
+
+
+public class progexampletime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		maths m1=new maths();
+		m1.num(10, 10);
+		
+		m1.num(10);
+		m1.num1(2.5);
+		
+		
+		
+
+	}
+
+}
+
+
+
+*selinium java *
+
+package seliniumjava;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class demo1 {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+			//for windows = geckodriver.exe   | 
+			
+			
+			WebDriver driver=new FirefoxDriver();
+			//ctrl+shift+o  
+			
+			driver.get("https://www.google.com");
+			
+			//to hold webpages
+			Thread.sleep(2000);
+			
+			//to close webpages
+			driver.close();
+		
+
+	}
+
+}
+
+
+package seliniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class prog1 {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://mail.rediff.com/cgi-bin/login.cgi");
+		d.findElement(By.name("login")).sendKeys("admin");
+		d.findElement(By.name("passwd")).sendKeys("password");
+		d.findElement(By.name("proceed")).click();
+		
+		Thread.sleep(2000);
+		//d.close();
+
+	}
+
+}
+
+
+package seliniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class PROG2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://demo.guru99.com/Agile_Project/Agi_V1/");
+		
+		d.findElement(By.name("uid")).sendKeys("admin");
+		d.findElement(By.name("password")).sendKeys("abc");
+		d.findElement(By.name("btnLogin")).click();
+		}
+
+}
+
+
+package seliniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class prog3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		
+		//d.get("https://www.amazon.in/");
+		
+		d.findElement(By.linkText("Best Sellers")).click();
+		//d.findElement(By.id("twotabsearchtextbox")).sendKeys("mobile");
+		//d.findElement(By.linkText("nav-search-submit-button")).click();
+		
+		d.findElement(By.id("nav_cs_bestsellers")).click();
+		//d.findElement(By.linkText("nav-search-submit-button")).click();
+		//d.findElement(By.id("nav-search-submit-button")).click();
+
+	}
+
+}
+
+
+package seliniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class prog4 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://demo.guru99.com/test/login.html");
+		
+		d.findElement(By.id("email")).sendKeys("pratik9809800@gmail.com");
+		d.findElement(By.id("passwd")).sendKeys("123456");
+		d.findElement(By.id("SubmitLogin")).click();
+		Thread.sleep(2000);
+		//d.findElement(By.className("button btn btn-default button-medium")).click();
+		
+		
+	}
+
+}
+
+
+*XPATH*
+
+package seliniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class xpath {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		// TODO Auto-generated method stub
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://demo.guru99.com/test/login.html");
+		d.findElement(By.xpath("//input[@id='email']")).sendKeys("pratik");
+		d.findElement(By.xpath("//input[@id='passwd']")).sendKeys("12345");
+		d.findElement(By.xpath("//button[@id='SubmitLogin']")).click();
+		
+		Thread.sleep(10000);
+		
+
+	}
+
+}
+
+package seliniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class xpath2 {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://mail.rediff.com/cgi-bin/login.cgi");
+	
+		d.findElement(By.xpath("//input[@id='login1']")).sendKeys("pratik");
+		d.findElement(By.xpath("//input[@id='password']")).sendKeys("100");
+		d.findElement(By.xpath("//input[@type='submit']")).click();
+		
+		
+		
+
+	}
+
+}
+
+
+
+action *
+
+package seliniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class handle_alert3 {
+
+	public static void main(String[] args) {
+		
+		
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://demo.guru99.com/Agile_Project/Agi_V1/");
+		
+		WebElement ele1=d.findElement(By.xpath("//input[@type='text']"));
+		Actions act1=new Actions(d);
+		
+		act1.keyDown(ele1,Keys.SHIFT).sendKeys("pratik").build().perform();
+		
+		
+		WebElement ele2=d.findElement(By.xpath("//input[@type='password']"));
+		Actions act2=new Actions(d);
+		
+		act2.keyDown(ele2,Keys.SHIFT).sendKeys("abc").build().perform();
+	
+		
+		d.findElement(By.name("btnLogin")).click();
+		
+		
+		
+		
+		
+		
+		
+
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+package seliniumjava;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class handle_alter {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://mail.rediff.com/cgi-bin/login.cgi");
+		
+		d.findElement(By.name("proceed")).click();
+		Alert alt=d.switchTo().alert();
+		Thread.sleep(2000);
+		
+		System.out.println(alt.getText());
+		alt.accept();
+	
+		
+		
+
+	}
+
+}
+
+
+
+package seliniumjava;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class handle_alert2 {
+
+	public static void main(String[] args) throws Exception {
+		
+		
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		// TODO Auto-generated method stub
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://testpages.herokuapp.com/styled/alerts/alert-test.html");
+		
+		d.findElement(By.id("alertexamples")).click();
+		
+		Alert alr=d.switchTo().alert();
+		Thread.sleep(2000);
+		
+		System.out.println(alr.getText());
+		alr.accept();
+		
+		d.findElement(By.id("confirmexample")).click();
+		Alert a=d.switchTo().alert();
+		
+		System.out.println(a.getText());
+		a.accept();
+		
+		
+		d.findElement(By.id("promptexample")).click();
+		Alert art=d.switchTo().alert();
+		
+		System.out.println(art.getText());
+		art.dismiss();
+		
+		
+		
+		
+
+	}
+
+}
+
+
+
+*dropdown*
+package seliniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class DragnDrop {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		d.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
+		
+		WebElement s=d.findElement(By.id("box7"));
+		WebElement a=d.findElement(By.id("box107"));
+		
+		Actions Act1=new Actions(d);
+		Act1.dragAndDrop(s, a).build().perform();
+
+		
+		WebElement b=d.findElement(By.id("box3"));
+		WebElement c=d.findElement(By.id("box103"));
+		
+
+		
+		Act1.dragAndDrop(b, c).build().perform();
+		
+		WebElement e=d.findElement(By.id("box2"));
+		WebElement f=d.findElement(By.id("box102"));
+		
+		Act1.dragAndDrop(e, f).build().perform();
+		
+		WebElement g=d.findElement(By.id("box6"));
+		WebElement h=d.findElement(By.id("box106"));
+		
+		Act1.dragAndDrop(g, h).build().perform();
+		
+		WebElement i=d.findElement(By.id("box1"));
+		WebElement j=d.findElement(By.id("box101"));
+		Act1.dragAndDrop(i, j).build().perform();
+		
+
+		WebElement x=d.findElement(By.id("box4"));
+		WebElement y=d.findElement(By.id("box104"));
+		Act1.dragAndDrop(x, y).build().perform();
+
+		WebElement m=d.findElement(By.id("box5"));
+		WebElement n=d.findElement(By.id("box105"));
+		Act1.dragAndDrop(m, n).build().perform();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}
+
+
+*scroll down*
+
+package seliniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class project1 {
+
+	public static void main(String[] args) {
+		
+	System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://demo.guru99.com/test/drag_drop.html");
+		JavascriptExecutor js=(JavascriptExecutor)d;	
+		
+		js.executeScript("window.scrollBy(0,500)");
+		
+		
+		
+		
+		WebElement a=d.findElement(By.xpath("//a[contains(text(),'BANK')]"));
+		WebElement b=d.findElement(By.xpath("//ol[@id='bank']//li[@class='placeholder']"));
+		
+		Actions act1=new Actions(d);
+		
+		
+		act1.dragAndDrop(a, b).build().perform();
+		
+		
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+*spicejet (dropdown)*
+
+package seliniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class SPICEJET {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://book.spicejet.com/");
+		
+		Select sell=new Select(d.findElement(By.id("ControlGroupSearchView_AvailabilitySearchInputSearchView_DropDownListCurrency")));
+		sell.selectByIndex(5);
+		sell.selectByValue("INR");
+		sell.selectByVisibleText("SGD");
+		
+
+	}
+
+}
+
+
+ALERT
+
+package seliniumjava;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class proj2 {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://www.tutorialspoint.com/selenium/practice/alerts.php");
+		//simple alert
+		
+		d.findElement(By.xpath("//div[@class='d-flex justify-content-between']//button[@type='button'][contains(text(),'Alert')]")).click();
+		Alert a1=d.switchTo().alert();
+	
+		Thread.sleep(2000);
+		System.out.println(a1.getText());
+		a1.accept();
+		
+		
+		d.findElement(By.xpath("//body[@class='text-center']/main/div[@class='container']/div[@class='row d-flex justify-content-center logindiv bg-white rounded']/div[@class='col-md-8 col-lg-8 col-xl-8']/div[3]/button[1]")).click();
+		Thread.sleep(5000);
+		
+		//Alert art=d.switchTo().alert();
+		System.out.println(a1.getText());
+		a1.accept();
+		
+		d.findElement(By.xpath("//body[@class='text-center']/main/div[@class='container']/div[@class='row d-flex justify-content-center logindiv bg-white rounded']/div[@class='col-md-8 col-lg-8 col-xl-8']/div[4]/button[1]")).click();
+		//Alert a=d.switchTo().alert();
+		a1.sendKeys("pratik");
+		System.out.println(a1.getText());
+		a1.accept();
+		
+		
+		
+
+	}
+
+}
+
+form filling program 
+
+
+package mvnbst32selprog;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Program_for_form_filling {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://www.hyrtutorials.com/p/basic-controls.html");
+		
+		d.findElement(By.name("fName")).sendKeys("Pratik");
+		d.findElement(By.name("lName")).sendKeys("Singh");
+		d.findElement(By.id("malerb")).click();
+		d.findElement(By.id("englishchbx")).click();
+		d.findElement(By.id("hindichbx")).click();
+		
+		
+		d.findElement(By.name("email")).sendKeys("pratik9809800@gmail.com");
+		d.findElement(By.name("psw")).sendKeys("abc");
+		
+		//d.findElement(By.id("registerbtn")).click();
+		
+		d.findElement(By.id("clearbtn")).click();
+		
+	}
+
+}
+
+
+amazon
+
+
+package mvnbst32selprog;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class amazon {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		
+System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("https://www.amazon.in/");
+		
+
+		
+		d.findElement(By.xpath("//a[contains(text(),'Mobiles')]")).click();
+		
+
+		
+		d.findElement(By.xpath("//span[contains(text(),'₹1,000 - ₹5,000')]")).click();
+		//d.findElement(By.id("a-autoid-2-announce")).click();
+		JavascriptExecutor js=(JavascriptExecutor)d;	
+		js.executeScript("window.scrollBy(0,900)");
+		Thread.sleep(2000);
+		d.findElement(By.xpath("//button[@id='a-autoid-5-announce']")).click();
+		
+		
+
+	}
+
+}
+
+
+parents child program
+
+
+package mvnbst32selprog;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.sun.tools.jdi.EventSetImpl.Itr;
+
+public class parentschildprogram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		
+		WebDriver d=new FirefoxDriver();
+		d.get("https://demo.guru99.com/popup.php");
+		d.findElement(By.linkText("Click Here")).click();
+		String mainw=d.getWindowHandle();
+    Set<String> ls =d.getWindowHandles();
+    
+    //Iterator<E> <String>itr=ls.iterator();
+    Iterator <String>itr=ls.iterator();
+    while(itr.hasNext())
+    {
+    	String Child= itr.next();
+    	if (!mainw.equalsIgnoreCase(Child)) {
+    		d.switchTo().window(Child);
+    		d.navigate().refresh();
+    		
+    		d.findElement(By.name("emailid")).sendKeys("pratik9809800@gmail.com");
+    		d.findElement(By.name("btnLogin")).click();
+    		
+    		
+    	}
+    }
+    
+    
+
+	}
+
+}
+
+
+
+*excel program*
+
+package exceljavaproject;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class excelprogram {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		File fp=new File("/home/student/Desktop/pratikexcel.xlsx");
+		FileInputStream ip=new FileInputStream(fp);
+		Workbook wb=new XSSFWorkbook(ip);
+		XSSFSheet sh=(XSSFSheet)wb.getSheetAt(0);
+		
+		System.setProperty("webdriver.gecko.driver", "/home/student/Desktop/Selenium java/geckodriver");
+		WebDriver d=new FirefoxDriver();
+		d.get("https://demo.guru99.com/test/newtours/");
+		for(int i=0;i<=sh.getLastRowNum();i++)
+		{
+			String us=sh.getRow(i).getCell(i).getStringCellValue();
+			String ps=sh.getRow(i).getCell(i).getStringCellValue();
+			
+			
+		
+			
+			
+			d.findElement(By.name("userName")).sendKeys(us);
+			d.findElement(By.name("password")).sendKeys(ps);
+			d.findElement(By.xpath("//input[@type='submit']")).click();
+			d.findElement(By.xpath("//a[contains(text(),'SIGN-OFF')]")).click();
+			
+			
+			
+		}
+
+		
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
